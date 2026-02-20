@@ -13,13 +13,6 @@ main:
     li $v0, 10
     syscall
 
-#################################################
-# quicksort(A, low, high)
-# a0 = base
-# a1 = low
-# a2 = high
-#################################################
-
 quicksort:
     addi $sp, $sp, -16
     sw $ra, 12($sp)
@@ -44,10 +37,6 @@ qs_return:
     lw $ra, 12($sp)
     addi $sp, $sp, 16
     jr $ra
-
-#################################################
-# partition(A, low, high)
-#################################################
 
 partition:
     addi $sp, $sp, -12
@@ -101,3 +90,4 @@ part_done:
     lw $ra, 8($sp)
     addi $sp, $sp, 12
     jr $ra
+
